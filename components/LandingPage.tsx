@@ -16,15 +16,15 @@ import {
 
 import type { LucideIcon } from 'lucide-react';
 
-const features: [string, LucideIcon][] = [
-  ['AI review replies', Star],
-  ['Instagram DM replies', MessageCircle],
-  ['WhatsApp automation', MessageCircle],
-  ['Email assistant', Mail],
-  ['Multilingual AI', Languages],
-  ['Smart tone adaptation', Sparkles],
-  ['Analytics dashboard', BarChart3],
-  ['Team notifications', BellRing]
+const features: { title: string; icon: LucideIcon }[] = [
+  { title: 'AI review replies', icon: Star },
+  { title: 'Instagram DM replies', icon: MessageCircle },
+  { title: 'WhatsApp automation', icon: MessageCircle },
+  { title: 'Email assistant', icon: Mail },
+  { title: 'Multilingual AI', icon: Languages },
+  { title: 'Smart tone adaptation', icon: Sparkles },
+  { title: 'Analytics dashboard', icon: BarChart3 },
+  { title: 'Team notifications', icon: BellRing }
 ];
 
 const pricing = [
@@ -98,15 +98,22 @@ export default function LandingPage() {
       <section className="section-wrap py-24">
         <h2 className="text-3xl font-semibold md:text-5xl">Automation features built for local businesses</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {features.map(([title, Icon]) => (
-            <motion.div key={title} whileHover={{ y: -6 }} className="glass rounded-2xl p-5 transition-shadow hover:shadow-glow">
-              <Icon className="mb-4 h-6 w-6 text-cyan-300" />
-              <p>{title}</p>
-              <p className="mt-2 text-sm text-slate-300">
-                High-quality AI responses with tone and context awareness.
-              </p>
-            </motion.div>
-          ))}
+          {features.map((feature) => {
+  const Icon = feature.icon;
+  return (
+    <motion.div
+      key={feature.title}
+      whileHover={{ y: -6 }}
+      className="glass rounded-2xl p-5 transition-shadow hover:shadow-glow"
+    >
+      <Icon className="mb-4 h-6 w-6 text-cyan-300" />
+      <p>{feature.title}</p>
+      <p className="mt-2 text-sm text-slate-300">
+        High-quality AI responses with tone and context awareness.
+      </p>
+    </motion.div>
+  );
+})}
         </div>
       </section>
 
