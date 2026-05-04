@@ -14,7 +14,9 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-const features = [
+import type { LucideIcon } from 'lucide-react';
+
+const features: [string, LucideIcon][] = [
   ['AI review replies', Star],
   ['Instagram DM replies', MessageCircle],
   ['WhatsApp automation', MessageCircle],
