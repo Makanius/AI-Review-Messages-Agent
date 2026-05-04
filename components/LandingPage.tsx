@@ -14,8 +14,6 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-import type { LucideIcon } from 'lucide-react';
-
 const features: { title: string; icon: LucideIcon }[] = [
   { title: 'AI review replies', icon: Star },
   { title: 'Instagram DM replies', icon: MessageCircle },
