@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import {
   Bot,
-  ChartArea,
+  BarChart3,
   Languages,
   Mail,
   MessageCircle,
