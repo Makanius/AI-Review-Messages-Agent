@@ -21,7 +21,7 @@ const features = [
   ['Email assistant', Mail],
   ['Multilingual AI', Languages],
   ['Smart tone adaptation', Sparkles],
-  ['Analytics dashboard', ChartArea],
+  ['Analytics dashboard', BarChart3],
   ['Team notifications', BellRing]
 ];
 
