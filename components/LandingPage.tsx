@@ -143,7 +143,7 @@ export default function LandingPage() {
               Replies sent today: 1,248
             </div>
             <div className="rounded-2xl bg-white/5 p-4">
-              <ChartArea className="mb-2 text-indigo-300" />
+              <BarChart3 className="mb-2 text-indigo-300" />
               Sentiment: +27% this month
             </div>
           </div>
